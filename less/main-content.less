@@ -10,23 +10,25 @@ header {
 	height: 100px;
 	margin-bottom: 20px;
 	display: flex;
+	flex-direction: column-reverse;
+	align-items: center;
 	@media @phone {
-		flex-direction: column-reverse;
-		align-items: center;
+		flex-direction: row;
 	}
+
 	nav {
 		.center-content;
-		width: 80%;
-		height: 100%;
-		background: @primary-color;
+		width: 100%;
+		height: 50px;
+		background-color: orange;
 		margin-right: 2%;
-		@media @laptop {
+		@media @phone {
+			height: 100px;
+			width: 80%;
 			background-color: green;
 		}
-		@media @phone {
-			background-color: orange;
-			height: 50px;
-			width: 100%;
+		@media @laptop {
+			background: @primary-color;
 		}
 	}
 	.logo {
@@ -34,9 +36,9 @@ header {
 		.border-radius(50%);
 		width: 20%;
 		height: 100%;
-		background: @primary-color;
+		background-color: purple;
 		@media @tablet {
-			background-color: purple;
+			background: @primary-color;
 		}
 	}
 }
@@ -47,12 +49,12 @@ header {
 	height: 420px;
 	margin-bottom: 20px;
 	display: flex;
-	flex-flow: wrap;
+	flex-flow: nowrap column;
 	justify-content: space-evenly;
 	@media @tablet {
-		flex-wrap: nowrap;
-		flex-direction: column;
+		flex-flow: wrap row;
 	}
+
 	.boxes {
 		width: 45%;
 		height: 200px;
@@ -63,37 +65,45 @@ header {
 		.center-content;
 	}
 	.box1 {
-		@media @laptop {
+		background-color: orange;
+		width: 100%;
+		@media @phone {
 			background-color: green;
 		}
 		@media @tablet {
-			width: 100%;
+			width: 45%;
 		}
-		@media @phone {
-			background-color: orange;
+		@media @laptop {
+			background: @primary-color;
 		}
 	}
 	.box2 {
+		background-color: purple;
+		width: 100%;
 		@media @tablet {
-			background-color: purple;
-			width: 100%;
+			background: @primary-color;
+			width: 45%;
 		}
 	}
 	.box3 {
+		background-color: purple;
+		width: 100%;
 		@media @tablet {
-			background-color: purple;
-			width: 100%;
+			background: @primary-color;
+			width: 45%;
 		}
 	}
 	.box4 {
-		@media @laptop {
+		background-color: orange;
+		width: 100%;
+		@media @phone {
 			background-color: green;
 		}
 		@media @tablet {
-			width: 100%;
+			width: 45%;
 		}
-		@media @phone {
-			background-color: orange;
+		@media @laptop {
+			background: @primary-color;
 		}
 	}
 }
@@ -101,9 +111,9 @@ header {
 footer {
 	width: 100%;
 	height: 50px;
-	background: @primary-color;
+	background: orange;
 	.center-content;
 	@media @phone {
-		background-color: orange;
+		background: @primary-color;
 	}
 }
